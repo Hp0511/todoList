@@ -1,0 +1,536 @@
+:root {
+  --blue: #0a6ece;
+  --darkblue: #0056b3;
+  --darkwhite: #f3f2f1;
+}
+
+/* Body */
+body {
+  background-color: var(--darkwhite);
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Menu */
+.menu {
+  background-color: var(--blue);
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 0;
+}
+
+/* Left Menu */
+.leftMenu,
+.searchbar,
+.menuIcon {
+  display: flex;
+  align-items: center;
+}
+
+.menubutton {
+  background-color: var(--blue);
+  border: none;
+  height: 3rem;
+  width: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+.menubutton:hover {
+  background-color: var(--darkblue);
+}
+
+.todo {
+  margin-left: 10px;
+  padding-left: 0px;
+  min-width: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font: Arial;
+  line-height: 48px;
+}
+
+.todo:hover {
+  text-decoration: underline;
+}
+
+/* Search bar */
+.searchbar {
+  position: static;
+  width: 400px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin-right: 35px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.searchbar:hover,
+.searchbar:hover .search-input {
+  background-color: #f7f7f7;
+}
+
+.search-icon {
+  margin-right: 10px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 3px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.search-input::placeholder {
+  color: transparent;
+}
+
+.search-input:focus::placeholder {
+  color: black;
+}
+
+.search-input:focus {
+  outline: none;
+  cursor: auto;
+}
+
+/* Right button */
+.tbBtn {
+  background: #f3f2f1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+}
+
+.tbBtn:hover {
+  background-color: white;
+  border-radius: 3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* Toolbar */
+.Toolbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* Left tool bar */
+.leftToolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.lefttoolbarBtn {
+  display: flex;
+  gap: 10px;
+}
+
+.myday {
+  font-size: 16px;
+  font: Arial;
+  line-height: 48px;
+}
+/* Right tool bar */
+.rightToolbar {
+  gap: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 20px;
+  padding-right: 30px;
+}
+
+.tbdate {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 110px;
+}
+
+#todayDate {
+  font-size: 13px;
+  font: Arial;
+  line-height: 3px;
+  padding: 0px;
+  margin-top: 6px;
+}
+
+.Task {
+  margin-top: 3rem;
+  margin-bottom: 0px;
+  width: 97%;
+  height: 11.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputholder {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#taskinput {
+  width: 90%;
+  height: 20px;
+  border: none;
+  font-size: 15px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#taskinput:focus {
+  border: none;
+  outline: none;
+}
+
+.smallTaskbutton {
+  padding-left: 22px;
+  line-height: 8px;
+  color: #1c9fff;
+  cursor: pointer;
+}
+
+.taskBtn {
+  display: flex;
+  width: 100%;
+  height: 60%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #faf9f8;
+  border-style: hidden;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.righttaskBtn {
+  margin-right: 20px;
+}
+
+.addbutton {
+  background-color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  padding-right: 30px;
+  border-radius: 3px;
+  border: 10px;
+  color: gray;
+  cursor: not-allowed;
+}
+
+.addbutton:focus{
+  border: none;
+  outline: none;
+}
+
+.lefttaskBtn {
+  margin-left: 14.5px;
+}
+
+.funcBtn {
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.1px;
+}
+
+.funcBtn:hover {
+  background-color: white;
+}
+
+.taskcontainer {
+  width: 96.5%;
+  margin: 20px 0px 1px 0px;
+  padding: 0 0 0 0;
+  background-color: white;
+  padding: 3px;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table th {
+  padding: 0.75em;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.emptycol {
+  width: auto;
+}
+
+td {
+  vertical-align: middle;
+}
+
+td:hover:not([name="non-select"]) {
+  outline: 0.3px solid #c3c1c1;
+  cursor: default;
+}
+
+td:hover .infoIcon, td:hover .calIcon {
+  color: black !important;
+}
+
+td:focus .infoIcon, td:focus .calIcon {
+  color: black !important;
+}
+
+.taskrow {
+  height: 2.3em;
+}
+
+.taskcrit {
+  font-size: 13px;
+}
+
+.cpbtarea {
+  width: 2%;
+}
+
+.completedcb:hover {
+  cursor: pointer;
+}
+
+.cpbtcontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cpbtcontent:hover .cpBt, .cpbtcontent:hover  {
+  color: #1c9fff;
+}
+
+.psCb {
+  position: absolute;
+  color: #1c9fff;
+  cursor: pointer;
+  font-size: 20px !important;
+  z-index: 2;
+}
+
+.cpBt {
+  position: absolute;
+  color: transparent;
+  cursor: pointer;
+  font-size: 20px !important;
+  z-index: 1;
+}
+
+.undo{
+  position: absolute;
+  color: #1c9fff;
+  cursor: pointer;
+  font-size: 18px !important;
+}
+
+.duedate {
+  width: 10%;
+}
+
+.duedatect {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.calIcon {
+  margin-right: 3px;
+  color: transparent;
+}
+
+.impcb {
+  padding-left: 40px;
+  width: 7%;
+  text-align: left;
+}
+
+.tasktitle {
+  width: 38%;
+  padding-left: 13px;
+  text-align: left;
+}
+
+.titlect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoIcon {
+  margin-right: 10px;
+  font-size: 18px !important;
+  color: white;
+}
+
+.calIcon {
+  font-size: 18px !important;
+}
+
+.calIcon:hover {
+  cursor: pointer;
+}
+
+.cptask {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.showcp {
+  margin-left: 24px;
+  padding-right: 10px;
+  width: 140px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: none;
+}
+
+.showcp:hover {
+  cursor: pointer;
+  outline: 2px solid black;
+}
+
+.cptaskcontainer {
+  width: 97%;
+  margin: 1px 0px 1px 0px;
+  background-color: white;
+  padding: 0px auto auto auto;
+}
+
+.cptitle {
+  text-decoration: line-through;
+}
+
+.starcontent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  width: 24px;
+  height: 24px;
+}
+
+.imp1,
+.imp2 {
+  position: absolute;
+  font-size: 18px;
+  color: #1c9fff;
+}
+
+.imp1:hover, .imp2:hover {
+  cursor: pointer;
+}
+
+/*javascript*/
+.editInput{
+  width: 90%;
+  font-size: 16px;
+  padding-left: 0px;
+}
+
+.editInput:focus {
+  border: none; 
+  border-bottom:1px solid black;
+  outline: none; 
+}
+
+.duedatedropdown{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 255px;
+  left: 25px;
+  width: 200px;
+  padding: 6px 0;
+  z-index: 1000;
+
+}
+
+.duedateheader{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid rgb(114, 114, 114);
+}
+
+.duedatefooter{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid rgb(114, 114, 114);
+}
+
+.chooseduedate{
+  margin-top:5px;
+}
+
+.duedatecthtml{
+  width: 100%;
+  display:block;
+}
+
+.chooseduedate{
+  display: flex;
+  justify-content: space-around;
+}
+
+.duedatesep{
+  background-color: black;
+}
+
+.datetodue{
+  font-size: 14px;
+}

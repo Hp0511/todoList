@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Todolist</title>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="leftMenu">
+        <button type="button" class="menubutton" title="App Launcher">
+          <span class="material-symbols-outlined"> apps </span>
+        </button>
+
+        <h3 class="todo">To Do</h3>
+      </div>
+      <div class="searchbar" title="Search">
+        <span class="material-symbols-outlined"> search </span>
+        <input type="text" placeholder="Search" class="search-input" />
+      </div>
+
+      <div class="menuIcon">
+        <button type="button" class="menubutton" title="Settings">
+          <span class="material-symbols-outlined"> settings </span>
+        </button>
+
+        <button type="button" class="menubutton" title="Help & feedback">
+          <span class="material-symbols-outlined"> help </span>
+        </button>
+
+        <button type="button" class="menubutton" title="What's new">
+          <span class="material-symbols-outlined"> campaign </span>
+        </button>
+      </div>
+    </div>
+
+    <div class="Toolbar">
+        <div class="leftToolbar">
+          <div class="lefttoolbarBtn">
+            <button type="button" class="tbBtn">
+              <span class="material-symbols-outlined"> menu </span>
+            </button>
+            <h2 class="myday">My Day</h2>
+            <button type="button" class="tbBtn" title="Lists option menu">
+              <span class="material-symbols-outlined"> more_horiz </span>
+            </button>
+            <button type="button" class="tbBtn" title="Grid view">
+              <span class="material-symbols-outlined"> grid_view </span>
+              <span>Grid</span>
+            </button>
+            <button type="button" class="tbBtn" title="List View">
+              <span class="material-symbols-outlined"> view_list </span>
+              <span>List</span>
+            </button>
+          </div>
+          
+        </div>
+
+        <div class="rightToolbar">
+          <button type="button" class="tbBtn" title="Sort">
+            <span class="material-symbols-outlined"> swap_vert </span>
+            <span>Sort</span>
+          </button>
+          <button type="button" class="tbBtn" title="Group">
+            <span class="material-symbols-outlined"> ad_group </span>
+            <span>Group</span>
+          </button>
+          <button type="button" class="tbBtn" title="Suggestions">
+            <span class="material-symbols-outlined"> emoji_objects </span>
+            <span>Suggestions</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tbdate">
+      <p id = "todayDate"></p>
+    </div>
+
+
+    <div class="Task" id="task">
+      <div class="inputholder">
+        <div class="smallTaskbutton">
+          <i class="fa-solid fa-plus" id="plusIcon"></i>
+          <i class="fa-regular fa-circle" style="display:none" id="circleIcon"></i>
+        </div>
+        <input type="text" placeholder="Add a task" id="taskinput" />
+      </div>
+      <div class="taskBtn" style="display:none" id="taskFeature">
+        <div class="lefttaskBtn">
+          <button class="funcBtn" title="Add due date">
+            <span class="material-symbols-outlined">
+              calendar_month
+              </span>
+          </button>
+          <button class="funcBtn" title="Remind me">
+            <span class="material-symbols-outlined">
+              notifications
+              </span>
+          </button>
+            <button class="funcBtn" title="Repeat">
+              <span class="material-symbols-outlined">
+                repeat
+                </span>
+        </div>
+        
+      <div class="righttaskBtn">
+          <button class="addbutton" id="addButton" onclick="addTask()">Add</button>
+        </div> 
+      </div>
+    </div>
+
+    <div class="duedatedropdown" style="display:none">
+      <div class="duedateheader">
+        <h5>Due</h5>
+      </div>
+      <div class="duedatect">
+        <div class="chooseduedate">
+          <p class="datetodue">Today</p>
+          <p class="datetodue">Wed</p>
+        </div>
+        <div class="chooseduedate">
+          <p class="datetodue">Tomorrow</p>
+          <p class="datetodue">Thu</p>
+        </div>
+        <div class="chooseduedate">
+          <p class="datetodue">Next week</p>
+          <p class="datetodue">Mon</p>
+        </div>
+      </div>
+      <div class="chooseduedate duedatefooter">
+        <p class="datetodue">Pick a date</p>
+        <p class="datetodue"></p>
+      </div>
+    </div>
+
+    <div class="taskcontainer">
+      <table class="task-table">
+        <thead>
+          <tr class="taskrow">
+            <th></th>
+            <th class="taskcrit">Title</th>
+            <th class="taskcrit">Due Date</th>
+            <th class="taskcrit">Importance</th>
+            <th class="emptycol"></th>
+        </tr>
+        </thead>
+        
+        <tbody>
+          
+        </tbody>
+      </table>
+  </div>
+
+ 
+  <div class="cptask">
+      <div class="showcp">
+        <span class="material-symbols-outlined">
+        arrow_drop_down</span>
+        <strong>Completed</strong>
+        <p id="cpTaskcount"></p>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="cptaskcontainer">
+    <table class="task-table">
+    </table>
+    <footer>
+
+    </footer>
+    <script src="newscript.js"></script>
+
+  </body>
+</html>
